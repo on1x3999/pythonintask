@@ -117,7 +117,7 @@ def human_move(board, human):
 def computer_move(board, computer, human):
     #Ход компьютера
     board = board[:]
-    BEST_MOVES = (0, 4, 6, 2, 8, 3, 1, 7, 5)
+    BEST_MOVES = (4, 0, 8, 2, 7, 3, 1, 6, 5)
  
     print("Я выберу поле номер", end = " ")
     for move in legal_moves(board):
