@@ -7,7 +7,7 @@
 
 
 # Lubnin A.V.
-# 17.04.2017
+# 18.04.2017
 
 import random
 WORDS =("питон", "анаграмма", "простая", "сложная", "ответ", "подстаканник")
@@ -29,7 +29,7 @@ answer = "Zz"
 print("Boт анаграмма:", jumble) 	
 while answer != correct:
 	answer = str(input("Ваш вариант или 'Y' для открытия позиции случайной буквы: "))
-	if ((answer.lower == str("Y").lower) and (score > 0)):
+	if ((answer.lower() == str("Y").lower()) and (score > 0)):
 		i = random.randint(1, len(correct))
 		print("Вы использовали подсказку ", i, "буква: ", correct[i])
 		score-=1
