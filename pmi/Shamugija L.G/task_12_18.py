@@ -30,7 +30,7 @@ def instructions():
  def ask_yes_no(question):
     response = None
     while response not in ("Да", "Нет"):
-        response = input(question)
+        response = input(question).lower()
     return response
  
 def ask_number(question, low, high):
@@ -87,7 +87,7 @@ def human_move(board, human):
     while move not in legal:
         move = ask_number("Твой ход. Выбери поле (0-8):", 0, Square_number)
         if move not in legal:
-            print("\n-.- Серьезно? Ты не видишь, что поле занято? Выбери другое поле\n")
+            print("\n-.- Серьезно? Ты не видешь, что поле занято? Выбери другое поле\n")
     return move
      
 def computer_move(board, computer, human):
